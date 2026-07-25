@@ -80,6 +80,8 @@ Version control	                        GitHub
 ![Annotations](./screenshots/03-biological-annotations.png)
 4. AI-powered interpretation panel
 ![AI Report](./screenshots/04-ai-report-panel.png)
+5. Generated AI report 
+![Generated Report](./screenshots/05-generated-ai-report.png)
 -----------------------------------------------------------------
 🔮 Future Improvements (not built in this version):
 
