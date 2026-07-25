@@ -1,0 +1,6 @@
+{
+  "name": "RNA-Seq Storyteller",
+  "description": "A bioinformatics web app for interpreting DESeq2 differential expression results.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

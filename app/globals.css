@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+body {
+  background-color: #0A0C10;
+  color: #cbd5e1;
+}
+
+/* Custom scrollbars for high-density dashboard */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0C10;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+@layer utilities {
+  @media print {
+    body {
+      background-color: white !important;
+      color: black !important;
+      font-size: 12pt;
+    }
+
+    /* Hide everything except the report itself */
+    #upload-container,
+    #dataset-summary-container,
+    #volcano-plot-card,
+    #gene-tables-card,
+    #annotation-panel-card,
+    #report-download-container,
+    header,
+    footer,
+    nav {
+      display: none !important;
+    }
+
+    /* Make the report card occupy the entire printable page */
+    #ai-report-card {
+      border: none !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      width: 100% !important;
+    }
+
+    /* Standardize scrolling report container to expand during print */
+    #ai-report-card .overflow-y-auto {
+      max-height: none !important;
+      overflow: visible !important;
+    }
+
+    #ai-report-card .bg-[#0F1117] {
+      background-color: white !important;
+      border: none !important;
+      padding: 0 !important;
+    }
+    
+    .prose {
+      max-width: none !important;
+      color: black !important;
+    }
+  }
+}
+
