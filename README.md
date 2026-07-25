@@ -107,6 +107,8 @@ No database is used — the app is stateless per session by design.
 **4. AI-powered interpretation panel**
 ![AI Report](./screenshots/04-ai-report-panel.png)
 
+**5. Generated AI report — full biological interpretation output**
+![Generated Report](./screenshots/05-generated-ai-report.png)
 ---
 
 ## 🚀 How to Run This Project
