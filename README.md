@@ -1,8 +1,10 @@
-<🧬 RNA-Seq Storyteller:
+🧬 RNA-Seq Storyteller
+
+From Differential Expression to Biological Insight.
 
 RNA-Seq Storyteller is a web application that automates the first-pass biological interpretation of RNA-seq differential expression results. Upload a DESeq2 output file and it validates your data, visualizes it, retrieves real biological annotations, and produces an AI-generated interpretation grounded strictly in that annotation evidence — all in one workflow, exportable as a downloadable report.
 --------------------------------------------------------------
-🎯 The Problem:
+The Problem:
 RNA-seq differential expression analysis produces thousands of gene expression values. Turning that into a biological story is one of the most time-consuming parts of the workflow: researchers routinely switch between multiple annotation databases (GO, KEGG, Reactome), look up genes one at a time, and manually write up what the results mean — often for a small, targeted gene panel where the stakes of getting the interpretation right are high.
 ---------------------------------------------------------------
 Traget or who got this problelm:
@@ -12,14 +14,14 @@ Traget or who got this problelm:
 3. Instructors, who need a clean way to demonstrate the full RNA-seq interpretation workflow in one sitting
 4. RNA-Seq Storyteller doesn't replace that manual review — it removes the repetitive assembly work, so a researcher's time goes into evaluating the interpretation instead of gathering the inputs for it.
 ----------------------------------------------------------------
-Note on originality: 
+Originality: 
 This project is my own design, not a template or clone. Similar academic tools exist in the literature (e.g. multi-database enrichment chatbots with PubMed-grounded interpretation) — this app doesn't claim to be novel research. Its value is being lightweight, DESeq2-specific, and beginner-facing: a single guided session instead of stitching together five separate tools.
 ---------------------------------------------------------------
 🔗 Live App
 https://rna-seq-storyteller.vercel.app
 Open it, click "Use Sample Dataset" if you don't have a DESeq2 CSV on hand, and the full pipeline runs end to end.
 ---------------------------------------------------------------
-✅ Features:
+Features:
 
 1. Landing page with workflow overview, sample dataset, and a clear research/educational-use disclaimer
 2. DESeq2 CSV upload — accepts standard `Gene`, `log2FoldChange`, `padj` format
@@ -33,7 +35,7 @@ Open it, click "Use Sample Dataset" if you don't have a DESeq2 CSV on hand, and 
 10. AI-powered biological interpretation — see below
 Report export — download the full interpretation as a PDF
 --------------------------------------------------------------
-🤖 The AI Feature
+The AI Feature:
 
 Model: Gemini
 What it does: Once significant genes are identified and annotated, the app builds a structured evidence package — dataset statistics, top up/downregulated genes, their GO terms, pathways, and disease associations — and sends only that structured evidence to Gemini. The raw CSV is never sent to the model. This is a deliberate design choice: it means every claim the AI makes is traceable back to real annotation data, not the model's general training knowledge.
@@ -57,7 +59,7 @@ Output structure the AI is instructed to follow:
 6. Suggested Follow-Up Experiments
 In testing, this constraint held up in practice — for example, when a gene in the evidence package had no functional annotation available, the AI explicitly flagged "No functional summary available for this gene" rather than filling the gap with invented biology, and hedged inference-based claims (e.g. pathway activation not directly measured) with language like "indirectly points toward potential activation" rather than stating them as fact.
 -----------------------------------------------------------------
-🛠️ Built With:
+Built With:
 ____________________________________________________________
 Category	                            Tool / Service
 ____________________________________________________________
@@ -70,7 +72,7 @@ Build environment	                    Google AI Studio
 Hosting / Deployment	                Vercel
 Version control	                        GitHub
 -----------------------------------------------------------------
-📸 Screenshots:
+Screenshots:
 
 1. Landing page & upload
 ![Landing page](./screenshots/01-landing-page.png)
@@ -83,7 +85,7 @@ Version control	                        GitHub
 5. Generated AI report 
 ![Generated Report](./screenshots/05-generated-ai-report.png)
 -----------------------------------------------------------------
-🔮 Future Improvements (not built in this version):
+Future Improvements (not built in this version):
 
 Compare two datasets side by side
 KEGG pathway visualization and heatmaps
